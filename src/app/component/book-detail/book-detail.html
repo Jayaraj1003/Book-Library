@@ -1,0 +1,10 @@
+@if (book(); as selectedBook) {
+  <h2>{{ selectedBook.title }}</h2>
+  <p>Author: {{ selectedBook.author }}</p>
+  <p>Price: ₹{{ selectedBook.price }}</p>
+  <p>{{ selectedBook.inStock ? 'In stock' : 'Out of stock' }}</p>
+} @else if (isLoading()) {
+  <p>Loading...</p>
+} @else {
+  <p>Book not found.</p>
+}

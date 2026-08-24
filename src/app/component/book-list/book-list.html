@@ -1,0 +1,8 @@
+<h2>Book List</h2>
+<ul>
+  @for (book of books(); track book.id) {
+    <li>
+      <a [routerLink]="['/book', book.id]">{{ book.title }}</a>
+    </li>
+  }
+</ul>
